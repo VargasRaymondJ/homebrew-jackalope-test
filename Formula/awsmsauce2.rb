@@ -40,7 +40,7 @@ class Awsmsauce < Formula
       sha256 "42bc935f75cbdde66d905fcb1875330cb170f996d7dec91021a574b23dcb98a3"
 
       def install
-        bin.install "awsmsauce2"
+        bin.install "puggle"
       end
     end
   end
