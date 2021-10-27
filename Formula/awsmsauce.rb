@@ -5,42 +5,42 @@
 class Awsmsauce < Formula
   desc "Example binary distribution using goreleaser and homebrew"
   homepage "https://github.com/VargasRaymondJ/homebrew-jackalope-test"
-  version "0.7.0"
+  version "0.8.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/VargasRaymondJ/awsmsauce/releases/download/v0.7.0/awsmsauce_0.7.0_Darwin_arm64.tar.gz"
-      sha256 "6b60a7e2a6f40e932527e8943c00df43323c883ffa54cff8939764eca3ac1f99"
+      url "https://github.com/VargasRaymondJ/awsmsauce/releases/download/v0.8.0/awsmsauce_0.8.0_Darwin_arm64.tar.gz"
+      sha256 "8f0736dc646670840705be7d218a1d73d5916807e8ae2561ac489f1589a19a76"
 
       def install
-        bin.install "awsmsauce"
+        bin.install "awsmsausage"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/VargasRaymondJ/awsmsauce/releases/download/v0.7.0/awsmsauce_0.7.0_Darwin_x86_64.tar.gz"
-      sha256 "5716b41a69ad4ad99ca5a8102e8d9dfde1478e8f55fe55134f413d5a088e7f76"
+      url "https://github.com/VargasRaymondJ/awsmsauce/releases/download/v0.8.0/awsmsauce_0.8.0_Darwin_x86_64.tar.gz"
+      sha256 "675f40a54ce3a4815d047fb508e8fd6bd7996c84be20ab36371df26b687e86aa"
 
       def install
-        bin.install "awsmsauce"
+        bin.install "awsmsausage"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/VargasRaymondJ/awsmsauce/releases/download/v0.7.0/awsmsauce_0.7.0_Linux_x86_64.tar.gz"
-      sha256 "82af177046d3688d157fdafb9272e28f19e6419eaa1d2a0d10a58583c603a06d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/VargasRaymondJ/awsmsauce/releases/download/v0.8.0/awsmsauce_0.8.0_Linux_arm64.tar.gz"
+      sha256 "48cd2167e7259c361bbaac7a45fd515b10d8cad2f3d2260be67817bef89e7858"
 
       def install
-        bin.install "awsmsauce"
+        bin.install "awsmsausage"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/VargasRaymondJ/awsmsauce/releases/download/v0.7.0/awsmsauce_0.7.0_Linux_arm64.tar.gz"
-      sha256 "42bc935f75cbdde66d905fcb1875330cb170f996d7dec91021a574b23dcb98a3"
+    if Hardware::CPU.intel?
+      url "https://github.com/VargasRaymondJ/awsmsauce/releases/download/v0.8.0/awsmsauce_0.8.0_Linux_x86_64.tar.gz"
+      sha256 "a70540588d79da09e3567f3ab2967e43e3d8f5db7476821e150b81599c8bdc76"
 
       def install
-        bin.install "awsmsauce"
+        bin.install "awsmsausage"
       end
     end
   end
